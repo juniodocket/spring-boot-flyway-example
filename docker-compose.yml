@@ -1,0 +1,13 @@
+mysql5.5:
+  image: mysql:5.5
+  container_name: mysql5.5
+  ports:
+    - 3306:3306
+  environment:
+    - MYSQL_DATABASE=work
+    - MYSQL_USER=worker
+    - MYSQL_PASSWORD=worker
+    - MYSQL_ROOT_PASSWORD=root
+    - TZ=UTC
+  volumes:
+    - ./mysql5.5/conf.d:/etc/mysql/conf.d
